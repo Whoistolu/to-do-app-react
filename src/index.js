@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 //component file
 import TodoContainer from "./components/TodoContainer";
+
+//stylesheet
+import "./App.css"
+
 
 ReactDOM.render(
   <React.StrictMode>
