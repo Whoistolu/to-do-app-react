@@ -12,6 +12,12 @@ class TodoItem extends React.Component {
       editing: true,
     })
   }
+
+  handleUpdatedDone = event => {
+    if (event.key === "Enter") {
+      this.setState({ editing: false })
+    }
+  }
   
   render() {
 
@@ -45,8 +51,9 @@ class TodoItem extends React.Component {
           onChange={e => {
             this.props.setUpdate(e.target.value, id)
           }}
+          onKeyDown={this.handleUpdatedDone}
         />
-        
+
         <button onClick={() => this.props.deleteTodoProps(id)}>Delete</button>
         <span style={completed ? completedStyle : null}>{title}</span>
         </div>
