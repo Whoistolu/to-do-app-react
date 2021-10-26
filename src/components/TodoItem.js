@@ -43,9 +43,10 @@ class TodoItem extends React.Component {
           className={styles.textInput}
           value={title}
           onChange={e => {
-            console.log(e.target.value, id)
+            this.props.setUpdate(e.target.value, id)
           }}
         />
+        
         <button onClick={() => this.props.deleteTodoProps(id)}>Delete</button>
         <span style={completed ? completedStyle : null}>{title}</span>
         </div>
