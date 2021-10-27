@@ -3,21 +3,33 @@
 
 # To-Do-List-App
 
-![screenshot]()
+![screenshot](img/td.png)
 
 An application that let you organize your task.
 
 ## Built With
 
 - ReactJS
+- CSS
+- Eslint, Stylelint
 
-## To get a local copy run the following steps:
-- Copy [this link](https://github.com/Whoistolu/to-do-app-react/tree/develop)
-- Open your terminal or command line
-- Run "git clone Paste [this link](https://github.com/Whoistolu/to-do-app-react/tree/develop)"
-- Open the folder with your code editor
-- Create a branch to work on
-- Now You can edit the code and do a pull request
+## Getting Started
+
+To get a local copy up and running clone the repo and run
+
+`npm install`
+
+### Install
+
+to build a the project into `./build` folder run
+
+`npm run build`
+
+### Usage
+
+to serve the application on `localhost` run
+
+`npm start`
 
 ## Authors
 
