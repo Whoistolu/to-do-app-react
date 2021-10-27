@@ -1,7 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
+
 const Navbar = () => {
+
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
   const links = [
     {
@@ -16,9 +19,14 @@ const Navbar = () => {
     },
   ]
 
+  const handleToggle = () => {
+    setNavbarOpen(prev => !prev)
+  }
+
   return (
     <nav className="navBar">
-      <ul>
+      <button onClick={handleToggle}>{navbarOpen ? "Close" : "Open"}</button>
+      <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
         {links.map(link => {
           return (
             <li key={link.id}>
